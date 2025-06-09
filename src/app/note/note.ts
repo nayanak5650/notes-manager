@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NoteService } from '../services/note';
 
 @Component({
   selector: 'app-note',
@@ -7,15 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './note.scss'
 })
 export class Note {
+  constructor(private noteService:NoteService) {}
 delete: any;
-deleteNote(_t8: any) {
-throw new Error('Method not implemented.');
+@Input() noteContent: string = '';
+@Input() priority: string = '';
+@Input() id: number = 0;
+
+deleteNote() {
+  console.log('Delete note with ID:', this.id);
+  this.noteService.removeNote(this.id);
 }
-saveNote() {
-throw new Error('Method not implemented.');
-}
-save() {
-throw new Error('Method not implemented.');
-}
+
 
 }

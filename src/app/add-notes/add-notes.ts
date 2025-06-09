@@ -29,10 +29,11 @@ export class AddNotes {
       priority: this.noteForm.value.priority ?? '',
       id: Date.now() // Using timestamp as a unique ID
     });
+    this.noteForm.reset();
   }
 
   cancel() {
-    // this.note = '';
-    // this.priority = '';
+    this.noteForm.reset();
+    console.log('Note creation cancelled');
   }
 }

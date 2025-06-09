@@ -8,9 +8,10 @@
       {{ option.label }}
     </option>
   </select>
-</form>
   <div>
     <button type="submit" [disabled]="noteForm.invalid">save</button>
-    <button (click)="cancel()">Cancel</button>
+    <button type="button" (click)="cancel()">Cancel</button>
   </div>
+</form>
+  
 

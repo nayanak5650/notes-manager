@@ -1,15 +1,15 @@
 
 <h2>NoteComponent</h2>
 <div class="note-box" id="note1">
-  <h3>Note 1</h3>
+ 
   <label>
-    Note:
-    <input type="text" name="note1" placeholder="Enter note 1">
+    Note: {{noteContent}}
+  
   </label>
   <label>
-    Priority:
-    <input type="text" name="priority1" placeholder="Enter priority 1">
+    Priority: {{priority}}
+  
   </label>
-  <button onclick="deleteNote('note1')">Delete</button>
+  <button type="button" (click)="deleteNote()">Delete</button>
 </div>
 

@@ -1,6 +1,5 @@
 
 @for (item of notelist(); track item){
-     <app-note></app-note>
+     <app-note [noteContent]="item.noteText" [priority]="item.priority" [id]="item.id"></app-note>
 }
 <app-add-notes></app-add-notes>
- 

@@ -15,9 +15,9 @@ export class NoteService {
     this.noteslist.update(notes => [...notes, note]);
     debugger
   }
-  // removeNote(note: INoteInterface) {
-  //   this.noteslist.update(notes => notes.filter(n => n !== note));
-  // }
+  removeNote(id: number) {
+    this.noteslist.update(notes => notes.filter(n => n.id !== id));
+  }
 }
 interface INoteInterface {
   noteText: string;
