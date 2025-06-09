@@ -1,15 +1,13 @@
 
-<h2>NoteComponent</h2>
-<div class="note-box" id="note1">
- 
-  <label>
-    Note: {{noteContent}}
-  
-  </label>
-  <label>
-    Priority: {{priority}}
-  
-  </label>
-  <button type="button" (click)="deleteNote()">Delete</button>
+<div class="note-box">
+  <div class="note-content">
+    <span class="note-label">Note:</span>
+    <span class="note-text">{{noteContent}}</span>
+  </div>
+  <div class="note-priority">
+    <span class="priority-label">Priority:</span>
+    <span class="priority-value priority-{{priority}}">{{priority}}</span>
+  </div>
+  <button type="button" class="delete-button" (click)="deleteNote()">Delete</button>
 </div>
 

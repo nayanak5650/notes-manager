@@ -1,17 +1,22 @@
-<form [formGroup]="noteForm" (ngSubmit)="saveNote()">
-   <label for="note-text">Note</label>
-  <input id="note-text" type="text" placeholder="Enter your note here" formControlName="noteText"/>
-  <label for="priority">Priority List</label>
-  <select id="priority" formControlName="priority">
-    <option value="" disabled>Select an option</option>
-    <option *ngFor="let option of priorities" [value]="option.value">
-      {{ option.label }}
-    </option>
-  </select>
-  <div>
-    <button type="submit" [disabled]="noteForm.invalid">save</button>
-    <button type="button" (click)="cancel()">Cancel</button>
+<form [formGroup]="noteForm" (ngSubmit)="saveNote()" class="add-note-form">
+  <h2 class="form-title">Add a New Note</h2>
+  <div class="form-group">
+    <label for="note-text">Note</label>
+    <input id="note-text" type="text" placeholder="Enter your note here" formControlName="noteText" />
+  </div>
+  <div class="form-group">
+    <label for="priority">Priority List</label>
+    <select id="priority" formControlName="priority">
+      <option value="" disabled>Select an option</option>
+      <option *ngFor="let option of priorities" [value]="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+  </div>
+  <div class="button-group">
+    <button type="submit" class="save-button" [disabled]="noteForm.invalid">Save</button>
+    <button type="button" class="cancel-button" (click)="cancel()">Cancel</button>
   </div>
 </form>
-  
+
 

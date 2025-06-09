@@ -1,22 +1,79 @@
+.add-note-form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 2rem 2.5rem;
+  max-width: 400px;
+  margin: 2rem auto 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input[type="text"], select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+input[type="text"]:focus, select:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
 .save-button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  background-color: #007bff;
-  color: rgb(8, 177, 62);
+  background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+  color: #fff;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.save-button:disabled {
+  background: #b3d7ff;
+  cursor: not-allowed;
 }
 
 .cancel-button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  background-color: #6c757d;
-  color: rgb(198, 27, 27);
-  border: none;
+  background: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
   border-radius: 0.25rem;
   cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.cancel-button:hover {
+  background: #dc3545;
+  color: #fff;
 }

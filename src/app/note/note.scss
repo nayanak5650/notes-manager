@@ -1,14 +1,81 @@
 .note-box {
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin-bottom: 16px;
-  border-radius: 8px;
+  background: #f8fafc;
+  border: 1.5px solid #e0e7ef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.5rem 2rem 1.2rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: relative;
 }
-delete-button {
-  background-color: #dad5d6;
-  color: rgb(205, 37, 37);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+
+.note-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.note-content, .note-priority {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.08rem;
+}
+
+.note-label, .priority-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+.note-text {
+  color: #22223b;
+  font-weight: 400;
+}
+
+.priority-value {
+  font-weight: 600;
+  padding: 0.1rem 0.7rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.priority-critical {
+  background: #ffe5e5;
+  color: #d90429;
+  border: 1px solid #d90429;
+}
+.priority-high {
+  background: #fffbe5;
+  color: #f59e00;
+  border: 1px solid #f59e00;
+}
+.priority-low {
+  background: #e5ffe5;
+  color: #1b9c3a;
+  border: 1px solid #1b9c3a;
+}
+
+.delete-button {
+  align-self: flex-end;
+  background: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.25rem;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.5rem;
+}
+.delete-button:hover {
+  background: #dc3545;
+  color: #fff;
 }
