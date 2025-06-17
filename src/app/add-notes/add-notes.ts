@@ -10,11 +10,14 @@ import { NoteService } from '../services/note';
   imports: [ReactiveFormsModule,CommonModule],
 })
 export class AddNotes {
-  constructor(private noteService:NoteService) {}
+  constructor(private noteService:NoteService) {
+
+
+  }
+
    noteForm = new FormGroup({
     noteText: new FormControl('',Validators.required),
     priority: new FormControl('',Validators.required),
-
   });
   priorities= [
     { value: 'critical', label: 'critical' },
@@ -27,9 +30,13 @@ export class AddNotes {
     this.noteService.addNote({
       noteText: this.noteForm.value.noteText ?? '',
       priority: this.noteForm.value.priority ?? '',
-      id: Date.now() // Using timestamp as a unique ID
-    });
-    this.noteForm.reset();
+      id: undefined
+    })
+      .subscribe((response) => {
+        console.log('Note added successfully:', response);
+        this.noteForm.reset();
+        this.noteService.refreshNotes();
+      });
   }
 
   cancel() {
